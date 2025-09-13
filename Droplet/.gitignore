@@ -1,0 +1,44 @@
+# Python compiled files
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Django migrations (optional, but usually keep them in repo)
+# */migrations/*.pyc
+# */migrations/__pycache__/
+
+# Database files
+db.sqlite3
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Media files (if you don’t want to track uploads)
+media/
+uploads/
+
+# Static files (collected)
+staticfiles/
+static/
+
+# IDE / editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets / environment files
+.env
