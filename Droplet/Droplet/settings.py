@@ -37,19 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'base'
-=======
     'base',
     'authen',
     'rest_framework'
->>>>>>> fd4dabc (Implement simple Signup and Login REST API using Django without generics)
-=======
-    'base',
-    'authen',
-    'rest_framework'
->>>>>>> fd4dabcbf0589ff7cb172a3e08422d569f6c264d
 ]
 
 REST_FRAMEWORK = {
