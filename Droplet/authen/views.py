@@ -9,7 +9,9 @@ from rest_framework_simplejwt.tokens import RefreshToken
 @csrf_exempt
 def signup(req):
     if req.method == "POST":
+        # print(req.body)
         data = json.loads(req.body)
+        # print(data)
         username = data.get("username")
         email = data.get("email")
         password = data.get("password")
@@ -35,5 +37,17 @@ def login_(req):
             "refresh": str(refresh),
             "access": str(refresh.access_token),
         })
+
+@csrf_exempt
+def logout_(req):
+    if req.method=='POST':
+        data=json.loads(req.body)
+        print(data)
+        refresh_token=data["refresh"]
+        try:
+            token=RefreshToken(refresh_token)
+            token.blacklist()
+            return JsonResponse({"message":"Logged out Successful"})
+        except Exception:
+            return JsonResponse({"error":"Invalid token"})
         
-        return JsonResponse
